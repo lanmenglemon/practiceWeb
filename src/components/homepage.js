@@ -8,6 +8,7 @@ class Homepage extends Component {
         <header>
           <h1 className="Homepage-title">Parallume Inc.</h1>
         </header>
+        <button type="submit" className="btn btn-primary">aaa</button>
       </div>
     );
   }
