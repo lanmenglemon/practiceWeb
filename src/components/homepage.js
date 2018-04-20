@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import '../style/homepage.css';
+import Header from './header';
+import NaviBar from './naviBar';
 
 class Homepage extends Component {
   render() {
     return (
-      <div className="Homepage">
-        <header>
-          <h1 className="Homepage-title">Parallume Inc.</h1>
-        </header>
-        <button type="submit" className="btn btn-primary">aaa</button>
+      <div>
+        <Header />
+        <hr className="my-0 py-0"/>
+        <NaviBar />
       </div>
     );
   }

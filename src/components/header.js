@@ -22,7 +22,7 @@ class Header extends Component {
             <div className="col-auto">
               <span className="navbar-text">(408)757-1116</span>
             </div>
-            <div className="col-auto d-inline">
+            <div className="col-auto d-inline pr-0">
               <a className="nav-link" href="https://www.linkedin.com/in/kristofer-haushalter-617508144/"
                 target="_blank" rel="noopener">
                 <img src={linkedin} id="linkedin" />
