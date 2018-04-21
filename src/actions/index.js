@@ -9,5 +9,10 @@ export function changeSelectedTab(selectedTab) {
 }
 
 export function sendEmail(values, callback) {
-    
+    console.log("email sent");
+    return {
+      type: SEND_EMAIL,
+      payload: values
+    };
+
 }

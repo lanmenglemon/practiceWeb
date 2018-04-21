@@ -1,18 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import promise from "redux-promise";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import reducers from "./reducers";
-import Homepage from './components/homepage';
+import Homepage from "./components/homepage";
 
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from "./registerServiceWorker";
 
-
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
         <Switch>

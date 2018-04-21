@@ -22,6 +22,19 @@ module.exports = {
         hotUpdateChunkFilename: 'hot-update.js',
         hotUpdateMainFilename: 'hot-update.json'
     },
+    resolve: {
+        // alias: {
+        //     react: path.resolve('./node_modules/react'),
+        //     'react-dom': path.resolve('./node_modules/react-dom')
+        // } ,
+        extensions: ['.js', '.json']
+    },
+    // externals: {
+    //   react: 'React',
+    //   immutable: 'immutable',
+    //   'react-dom': 'react-dom',
+    //   'draft-js': 'draft-js',
+    // },
     module: {
         rules: [
             {
@@ -45,7 +58,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 loaders: [
-                    'url-loader'
+                    'file-loader'
                 ]
             },
             /** Loading Fonts */
@@ -71,4 +84,7 @@ module.exports = {
             }
         ]
     }
+    // resolveLoader: {
+    //   modules: [path.resolve(path.join(__dirname, 'node_modules'))],
+    // },
 };
