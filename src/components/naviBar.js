@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Tabs, TabLink, TabContent } from "react-tabs-redux";
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { RoutedTabs, NavTab } from 'react-router-tabs';
-import { Admins, Moderators, Users } from './components';
 
 import { changeSelectedTab } from "../actions/index";
 import ContentHome from "./content_home";
+import ContentOurTech from "./content_ourTech";
+import ContentOurTeam from "./content_ourTeam";
+import ContentContactUs from "./content_contactUs";
 
 
-class NaviBar extends Component {
+export default class NaviBar extends Component {
   // renderList() {
   //   return this.props.naviBarItems.map(item => {
   //     return(
@@ -24,6 +25,21 @@ class NaviBar extends Component {
   //     );
   //   });
   // }
+
+
+
+  // function mapStateToProps(state) {
+  //   return {
+  //     activeTab: state.activeTab
+  //   };
+  // }
+  //
+  // function mapDispatchToProps(dispatch) {
+  //   return bindActionCreators({ changeSelectedTab : changeSelectedTab }, (dispatch));
+  // }
+  //
+  // export default connect(mapStateToProps, mapDispatchToProps)(NaviBar);
+
 
   // <li className="nav-item my-auto ml-5 dropdown">
   //   <a className="nav-item nav-link dropdown-toggle mr-md-2" href="#"
@@ -39,46 +55,26 @@ class NaviBar extends Component {
 
   render() {
     return(
-        <Tabs className="tabs tabs-1" onClick={(selectedTab) => this.props.changeSelectedTab(selectedTab)}>
-          <div className="navbar white-div sticky-top">
-
+      <div>
+        <RoutedTabs startPathWith={"/home"} className="sticky-top ">
+          <nav className="navbar white-div">
             <div className="container">
-                <TabLink to="home" className="btn pl-0">Home</TabLink>
-                <TabLink to="ourTechnology" className="btn">Our Technology</TabLink>
-                <TabLink to="ourTeam" className="btn">Our Team</TabLink>
-                <TabLink to="contactUs" className="btn pr-0">Contact Us</TabLink>
+              <NavTab to="/home" className="btn px-0">Home</NavTab>
+              <NavTab to="/ourTech" className="btn px-0">Our Technology</NavTab>
+              <NavTab to="/ourTeam" className="btn px-0">Our Team</NavTab>
+              <NavTab to="/contactUs" className="btn px-0">Contact Us</NavTab>
             </div>
+          </nav>
+        </RoutedTabs>
+        <Switch>
+          <div className="contents">
+            <Route path={`/home`} component={ContentHome} />
+            <Route path={`/ourTech`} component={ContentOurTech} />
+            <Route path={`/ourTeam`} component={ContentOurTeam} />
+            <Route path={`/contactUs`} component={ContentContactUs} />
           </div>
-            <div className="contents">
-                <TabContent for="home">
-                  <ContentHome />
-                </TabContent>
-                <TabContent for="ourTechnology">
-                    <h2>Tab2 content</h2>
-                    <div>¯\_(ツ)_/¯</div>
-                </TabContent>
-                <TabContent for="ourTeam">
-                    <h2>Tab3 content</h2>
-                    <div>(╯°□°）╯︵ ┻━┻)</div>
-                </TabContent>
-                <TabContent for="contactUs">
-                    <h2>Tab4 content</h2>
-                    <div>😯</div>
-                </TabContent>
-            </div>
-        </Tabs>
+        </Switch>
+      </div>
     );
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    activeTab: state.activeTab
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ changeSelectedTab : changeSelectedTab }, (dispatch));
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(NaviBar);
