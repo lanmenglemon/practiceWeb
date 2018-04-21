@@ -14,10 +14,13 @@ module.exports = {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
+
     ],
     output: {
         path: __dirname + '/public/assets',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        hotUpdateChunkFilename: 'hot-update.js',
+        hotUpdateMainFilename: 'hot-update.json'
     },
     module: {
         rules: [
@@ -26,7 +29,7 @@ module.exports = {
                 exclude: /(node_modules)/,
                 loader: "babel-loader",
                 query: {
-                    cacheDirectory: true,
+                    cacheDirectory: false,
                     presets: ['es2015', 'react']
                 }
             },

@@ -28,6 +28,7 @@ class ContentHome extends Component {
                   <p>
                     Parallume Inc. is a multiplex assay platform biotechnology company aimed at revolutionizing the field of molecular diagnostics for life-science researchers in academic, industry, and clinical settings.
                   </p>
+                  <a href="/ourTech" className="btn btn-outline-dark" role="button" aria-disabled="true">Learn More</a>
                 </div>
               </div>
             </div>
