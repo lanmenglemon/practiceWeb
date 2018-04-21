@@ -44,4 +44,4 @@ class ContentContactUs extends Component {
 export default reduxForm({
   // a unique name for the form
   form: 'SendEmailForm'
-})(connect(null, {sendEmail}, {withRef: true} )(ContentContactUs));
+})(ContentContactUs);
