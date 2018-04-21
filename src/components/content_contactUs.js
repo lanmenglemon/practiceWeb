@@ -1,17 +1,14 @@
 import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
+import ContactForm from "./ContactForm";
 
-import ContactForm from "./ContactForm"
-
-import { sendEmail } from "../actions";
-
-class ContentContactUs extends Component {
+export default class ContentContactUs extends Component {
 
   render() {
     return(
-      <ContactForm />
+      <div>
+        <h1 className="text-bold text-center">CONTACT</h1>
+        <ContactForm />
+      </div>
     );
   }
 }
-
-export default ContentContactUs;

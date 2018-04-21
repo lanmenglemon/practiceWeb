@@ -45,8 +45,8 @@ export default class NaviBar extends Component {
 
   render() {
     return(
-      <div>
-        <RoutedTabs startPathWith={"/home"} className="sticky-top ">
+      <div className="sticky-top">
+        <RoutedTabs startPathWith={"/home"} >
           <nav className="navbar white-div">
             <div className="container">
               <NavTab to="/home" className="btn px-0">Home</NavTab>

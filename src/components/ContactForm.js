@@ -1,41 +1,83 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
+import { sendEmail } from "../actions/index";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-let ContactForm = props => {
+class ContactForm extends Component {
 
-  let renderField = field => {
+  onSubmit(values) {
+    // print the form values to the console
+      this.props.sendEmail(values, () => {
+        this.props.history.push("/home");
+    });
+  }
+
+  renderField(field) {
+    const { meta: { touched, error } } = field;
+    const className = `form-group ${touched && error ? "has-danger" : ""}`;
+
     return (
-      <div>
+      <div className={className}>
         <input className="form-control" type="text" {...field.input} />
+        <div className="text-help">
+          {touched ? error : ""}
+        </div>
       </div>
     );
   }
 
-  return (
-    <form>
-      <div>
-        <label htmlFor="name">Name</label>
-        <Field name="name" component={renderField} type="text" />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <Field name="email" component={renderField} type="email" />
-      </div>
-      <div>
-        <label htmlFor="subject">Subject</label>
-        <Field name="subject" component={renderField} type="text" />
-      </div>
-      <div>
-        <label htmlFor="message">Message</label>
-        <Field name="message" component={renderField} type="text" />
-      </div>
-    </form>
-  );
+  render() {
+    const { handleSubmit } = this.props;
+    return (
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <Field name="name" component={this.renderField} type="text" />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <Field name="email" component={this.renderField} type="email" />
+        </div>
+        <div>
+          <label htmlFor="subject">Subject</label>
+          <Field name="subject" component={this.renderField} type="text" />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <Field name="message" component={this.renderField} type="text" />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form>
+    );
+  }
 }
 
-ContactForm = reduxForm({
-  // a unique name for the form
-  form: 'contact'
-})(ContactForm)
+function validate(values) {
+  // console.log(values) -> { title: 'asdf', categories: 'asdf', content: 'asdf' }
+  const errors = {};
 
-export default ContactForm;
+  // Validate the inputs from 'values'
+  if (!values.name) {
+    errors.name = "Enter your name";
+  }
+  if (!values.email) {
+    errors.email = "Enter your Email";
+  }
+  if (!values.subject) {
+    errors.subject = "Enter your Subject";
+  }
+  if (!values.message) {
+    errors.message = "Enter your message";
+  }
+  // If errors is empty, the form is fine to submit
+  // If errors has *any* properties, redux form assumes form is invalid
+  return errors;
+}
+
+
+export default reduxForm({
+  // a unique name for the form
+  validate,
+  form: "ContactForm"
+})(connect(null, { sendEmail })(ContactForm));
