@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Tabs, TabLink, TabContent } from "react-tabs-redux";
-
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { RoutedTabs, NavTab } from 'react-router-tabs';
 import { Admins, Moderators, Users } from './components';
 
 import { changeSelectedTab } from "../actions/index";
 import ContentHome from "./content_home";
+
 
 class NaviBar extends Component {
   // renderList() {
@@ -41,6 +41,7 @@ class NaviBar extends Component {
     return(
         <Tabs className="tabs tabs-1" onClick={(selectedTab) => this.props.changeSelectedTab(selectedTab)}>
           <div className="navbar white-div sticky-top">
+
             <div className="container">
                 <TabLink to="home" className="btn pl-0">Home</TabLink>
                 <TabLink to="ourTechnology" className="btn">Our Technology</TabLink>

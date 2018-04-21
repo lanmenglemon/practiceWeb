@@ -42,7 +42,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 loaders: [
-                    'file-loader'
+                    'url-loader'
                 ]
             },
             /** Loading Fonts */
