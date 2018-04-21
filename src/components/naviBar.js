@@ -1,15 +1,5 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { Route, Switch, Redirect } from 'react-router-dom';
 import { RoutedTabs, NavTab } from 'react-router-tabs';
-
-import { changeSelectedTab } from "../actions/index";
-import ContentHome from "./content_home";
-import ContentOurTech from "./content_ourTech";
-import ContentOurTeam from "./content_ourTeam";
-import ContentContactUs from "./content_contactUs";
-
 
 export default class NaviBar extends Component {
   // renderList() {
@@ -66,14 +56,6 @@ export default class NaviBar extends Component {
             </div>
           </nav>
         </RoutedTabs>
-        <Switch>
-          <div className="contents">
-            <Route path={`/home`} component={ContentHome} />
-            <Route path={`/ourTech`} component={ContentOurTech} />
-            <Route path={`/ourTeam`} component={ContentOurTeam} />
-            <Route path={`/contactUs`} component={ContentContactUs} />
-          </div>
-        </Switch>
       </div>
     );
   }

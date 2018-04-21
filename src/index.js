@@ -7,7 +7,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reducers from "./reducers";
 import Homepage from './components/homepage';
-import ContentContactUs from "./components/content_contactUs";
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -17,7 +16,6 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/contactUs" component={ContentContactUs} />
           <Route path="/" component={Homepage} />
         </Switch>
       </div>
