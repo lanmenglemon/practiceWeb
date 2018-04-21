@@ -11,6 +11,7 @@ import ContentOurTeam from "./content_ourTeam";
 import ContentContactUs from "./content_contactUs";
 
 
+
 export default class NaviBar extends Component {
   // renderList() {
   //   return this.props.naviBarItems.map(item => {
