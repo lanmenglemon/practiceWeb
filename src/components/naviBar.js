@@ -4,9 +4,6 @@ import { selectNaviBarItem } from "../actions/index";
 import { bindActionCreators } from "redux";
 import { Tabs, TabLink, TabContent } from "react-tabs-redux";
 
-import Parallume_Bead from "../images/Parallume & PSTI/Parallume Beads.png";
-import Bead_Local_Slide from "../images/Parallume & PSTI/Bead Localization Slide.png";
-import Logo_With_Tagline from "../images/Parallume & PSTI/Parallume Logo_with tagline 4-16-18.png";
 
 class NaviBar extends Component {
   // renderList() {
@@ -70,25 +67,25 @@ class NaviBar extends Component {
 
         <Tabs className="tabs tabs-1">
           <div className="navbar white-div sticky-top">
-            <div className="container">
-                <TabLink to="tab1" className="btn pl-0">Home</TabLink>
-                <TabLink to="tab2" className="btn">Our Technology</TabLink>
-                <TabLink to="tab3" className="btn">Our Team</TabLink>
-                <TabLink to="tab4" className="btn pr-0">Contact Us</TabLink>
+            <div className="container flex-sm-row flex-column">
+                <TabLink to="tab1" className="btn px-0 col-12 col-sm-auto text-left">Home</TabLink>
+                <TabLink to="tab2" className="btn px-0 col-12 col-sm-auto text-left">Our Technology</TabLink>
+                <TabLink to="tab3" className="btn px-0 col-12 col-sm-auto text-left">Our Team</TabLink>
+                <TabLink to="tab4" className="btn px-0 col-12 col-sm-auto text-left">Contact Us</TabLink>
             </div>
           </div>
             <div className="contents">
                 <TabContent for="tab1">
                   <div className="container">
                     <div className="col-12 py-5">
-                      <img className="mx-auto py-5" src={Logo_With_Tagline} id="Logo_With_Tagline"/>
+                      <img className="mx-auto py-5" src="http://beibeiwang-beibei.com/public/images/Parallume_PSTI/Parallume Logo_with tagline 4-16-18.png" id="Logo_With_Tagline"/>
                       </div>
                   </div>
                   <div className="green-div">
                     <div className="container py-5">
                       <div className="row py-3">
                         <div className="col-lg-6 col-10 mx-auto mx-lg-0">
-                          <img className="mx-auto" src={Parallume_Bead} id="Parallume_Bead" />
+                          <img className="mx-auto" src="http://beibeiwang-beibei.com/public/images/Parallume_PSTI/Parallume Beads.png" id="Parallume_Bead" />
                           </div>
                           <div className="col-lg-6">
                           <div className="ml-lg-5 pl-lg-5 py-5 my-5 ">
