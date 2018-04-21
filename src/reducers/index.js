@@ -1,9 +1,7 @@
 import { combineReducers } from "redux";
-import ActiveNaviBarItemReducer from "./reducer_active_naviBarItem";
-import NaviBarItemsReducer from "./reducer_naviBarItems";
+import tabsReducer from "./reducer_tabs";
 
 const rootReducer = combineReducers({
-  naviBarItems : NaviBarItemsReducer,
-  activeNaviBarItem : ActiveNaviBarItemReducer
+  activeTab : tabsReducer
 });
 export default rootReducer;
