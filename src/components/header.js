@@ -13,7 +13,7 @@ class Header extends Component {
               <span className="navbar-text ml-0">Bringing Color to Life</span>
             </div>
             <div className="offset-lg-3 col-12 col-lg-auto pl-0">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="mailto:kris@parallume.com">
                 <span className="navbar-text">kris@parallume.com</span>
               </a>
             </div>

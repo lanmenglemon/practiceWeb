@@ -17,7 +17,7 @@ module.exports = {
 
     ],
     output: {
-        path: __dirname + '/public/assets',
+        path: __dirname + 'public/assets',
         filename: 'bundle.js',
         hotUpdateChunkFilename: 'hot-update.js',
         hotUpdateMainFilename: 'hot-update.json'
@@ -83,7 +83,10 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    node: {
+        fs: "empty"
+      }
     // resolveLoader: {
     //   modules: [path.resolve(path.join(__dirname, 'node_modules'))],
     // },

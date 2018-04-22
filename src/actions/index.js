@@ -1,3 +1,4 @@
+import axios from 'axios';
 export const CHANGE_SELECTED_TAB = 'CHANGE_SELECTED_TAB';
 export const SEND_EMAIL = 'SEND_EMAIL';
 
@@ -7,12 +8,22 @@ export function changeSelectedTab(selectedTab) {
         tab: selectedTab
     };
 }
-
-export function sendEmail(values, callback) {
-    console.log("email sent");
-    return {
-      type: SEND_EMAIL,
-      payload: values
-    };
-
+export function sendEmail(values) {
+  console.log("email sent");
+  axios({
+              method: 'post',
+              url: '/contact',
+              data: {
+                email: values.email,
+                subject: values.subject,
+                message: values.message
+              }
+            })
+            .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+            });
+  return { type: SEND_EMAIL, payload: values };
 }

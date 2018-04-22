@@ -8,9 +8,7 @@ class ContactForm extends Component {
 
   onSubmit(values) {
     // print the form values to the console
-      this.props.sendEmail(values, () => {
-        this.props.history.push("/home");
-    });
+      this.props.sendEmail(values);
   }
 
   renderField(field) {
@@ -30,7 +28,7 @@ class ContactForm extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))} role="form">
         <div>
           <label htmlFor="name">Name</label>
           <Field name="name" component={this.renderField} type="text" />
@@ -78,6 +76,6 @@ function validate(values) {
 
 export default reduxForm({
   // a unique name for the form
-  validate,
+  // validate,
   form: "ContactForm"
 })(connect(null, { sendEmail })(ContactForm));

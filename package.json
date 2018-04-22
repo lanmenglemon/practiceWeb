@@ -4,11 +4,13 @@
   "main": "webpack.config.js",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
+    "body-parser": "^1.18.2",
     "bootstrap": "^4.1.0",
-    "env2": "^2.2.0",
+    "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "nodemailer": "^4.6.4",
     "popper.js": "^1.14.3",
     "prop-types": "^15.6.1",
     "react": "^0.14.3",
@@ -26,7 +28,10 @@
     "watch": "webpack --mode development --config webpack.config.js --watch -d",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
