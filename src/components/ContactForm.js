@@ -30,7 +30,7 @@ class ContactForm extends Component {
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))} role="form">
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name"></label>
           <Field name="name" component={this.renderField} type="text" />
         </div>
         <div>
@@ -45,7 +45,9 @@ class ContactForm extends Component {
           <label htmlFor="message">Message</label>
           <Field name="message" component={this.renderField} type="text" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <div className="text-center">
+          <button type="submit" className="btn btn-primary center-block">Submit</button>
+        </div>
       </form>
     );
   }

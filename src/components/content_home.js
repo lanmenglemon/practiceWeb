@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { changeSelectedTab } from "../actions/index";
 import Parallume_Bead from "../images/Parallume_PSTI/Parallume_Beads.png";
 import Logo_With_Tagline from "../images/Parallume_PSTI/Parallume_Logo_with_tagline.png";
 
@@ -39,8 +38,4 @@ class ContentHome extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ changeSelectedTab : changeSelectedTab }, (dispatch));
-}
-
-export default connect(mapDispatchToProps)(ContentHome);
+export default ContentHome;
