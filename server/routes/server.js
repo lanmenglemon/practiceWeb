@@ -32,8 +32,8 @@ module.exports = app => {
       port: 465,
       secure: true,
       auth: {
-        user: 'lanmenglemon@gmail.com',
-        pass: 'psvsvmwdipczzxgp'
+        user: '',
+        pass: ''
       }
     });
     mailOpts = {
