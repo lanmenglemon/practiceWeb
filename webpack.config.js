@@ -1,65 +1,66 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const glob = require('glob');
+// const PurifyCssPlugin = require('purifycss-webpack');
 
 
 module.exports = {
-    entry: './src/index.js',
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './',
-        hot: true
+    entry: {
+      index: './client/src/index.js'
     },
-    plugins: [
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-
-    ],
     output: {
-        path: __dirname + 'public/assets',
-        filename: 'bundle.js',
+        path: __dirname + '/client/dist',
+        filename: 'js/bundle.js',
         hotUpdateChunkFilename: 'hot-update.js',
         hotUpdateMainFilename: 'hot-update.json'
     },
+    devtool: 'inline-source-map',
+    devServer: {
+	    contentBase: "./client/dist",//本地服务器所加载的页面所在的目录
+	    colors: true,//终端中输出结果为彩色
+	    // historyApiFallback: true,//不跳转
+	    inline: true//实时刷新
+    },
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),//热加载插件
+      // new ExtractTextPlugin('client/dist/css/index.css'),
+      // new PurifyCssPlugin({
+      //   paths:glob.sync(path.join(__dirname,'client/dist/*.html'))
+      // })
+    ],
     resolve: {
-        // alias: {
-        //     react: path.resolve('./node_modules/react'),
-        //     'react-dom': path.resolve('./node_modules/react-dom')
-        // } ,
         extensions: ['.js', '.json']
     },
-    // externals: {
-    //   react: 'React',
-    //   immutable: 'immutable',
-    //   'react-dom': 'react-dom',
-    //   'draft-js': 'draft-js',
-    // },
     module: {
         rules: [
             {
                 test: path.join(__dirname, '.'),
                 exclude: /(node_modules)/,
-                loader: "babel-loader",
-                query: {
-                    cacheDirectory: false,
-                    presets: ['es2015', 'react']
-                }
+                loader: "babel-loader"
             },
-            /** Loading CSS */
+            /** Loading CSS & SASS */
             {
-                test: /\.css$/,
-                loaders: [
-                    "style-loader",
-                    "css-loader"
-                ]
+              test:/\.css$/,
+              loader: 'style-loader!css-loader!postcss-loader'
             },
+            /** Loading CSS & SASS */
+            // {
+            //   test:/\.less$/,
+            //   use:ExtractTextPlugin.extract({
+            //     fallback:"style-loader",
+            //     use:[{
+            //         loader:"css-loader"
+            //     },{
+            //         loader:"less-loader"
+            //     }]
+            // })
+            // },
             /** Loading Images */
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                loaders: [
-                    'file-loader'
-                ]
+                loader: 'url-loader'
             },
             /** Loading Fonts */
             {
@@ -86,8 +87,5 @@ module.exports = {
     },
     node: {
         fs: "empty"
-      }
-    // resolveLoader: {
-    //   modules: [path.resolve(path.join(__dirname, 'node_modules'))],
-    // },
+    }
 };
