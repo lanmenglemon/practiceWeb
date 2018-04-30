@@ -21,13 +21,13 @@ export default class CarouselSlides extends Component {
               <img type="button" className="d-block mx-auto w-100" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Tube} alt="First slide"/>
             </div>
             <div className="carousel-item">
-              <img type="button" className="d-block mx-auto w-80" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Slide} alt="Second slide"/>
+              <img type="button" className="d-block mx-auto " data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Slide} alt="Second slide"/>
             </div>
             <div className="carousel-item">
               <img type="button" className="d-block mx-auto" data-toggle="modal" data-target="#exampleModalCenter" src={Benchtop_MARS} alt="Third slide"/>
             </div>
             <div className="carousel-item">
-              <img type="button" className="d-block mx-auto w-200" data-toggle="modal" data-target="#exampleModalCenter" src={Mobile_MARS} alt="Forth slide"/>
+              <img type="button" className="d-block mx-auto" data-toggle="modal" data-target="#exampleModalCenter" src={Mobile_MARS} alt="Forth slide"/>
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -46,13 +46,13 @@ export default class CarouselSlides extends Component {
             <div className="modal-content">
               <div id="carouselExampleIndicator" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
-                  <li data-target="#carouselExampleIndicator" data-slide-to="0" className="active"></li>
+                  <li data-target="#carouselExampleIndicator" data-slide-to="0"  className="active"></li>
                   <li data-target="#carouselExampleIndicator" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicator" data-slide-to="2"></li>
                   <li data-target="#carouselExampleIndicator" data-slide-to="3"></li>
                 </ol>
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
+                  <div className="carousel-item">
                     <img src={Bead_Localization_Tube} alt="First slide"/>
                     <div className="carousel-caption d-none d-md-block">
                       <p>Bead Localization Tube</p>
@@ -64,7 +64,7 @@ export default class CarouselSlides extends Component {
                       <p>Bead Localization Slide</p>
                     </div>
                   </div>
-                  <div className="carousel-item">
+                  <div className="carousel-item active">
                     <img src={Benchtop_MARS} alt="Third slide"/>
                     <div className="carousel-caption d-none d-md-block">
                       <p>Benchtop MARS</p>

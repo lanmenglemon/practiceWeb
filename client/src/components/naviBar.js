@@ -48,11 +48,11 @@ export default class NaviBar extends Component {
       <div className="sticky-top">
         <RoutedTabs startPathWith={"/home"} >
           <nav className="navbar white-div">
-            <div className="container">
-              <NavTab to="/home" className="btn px-0">Home</NavTab>
-              <NavTab to="/overview" className="btn px-0">Overview</NavTab>
-              <NavTab to="/team" className="btn px-0">The Parallume Inc. Team</NavTab>
-              <NavTab to="/contactUs" className="btn px-0">Contact Us</NavTab>
+            <div className="container col-8">
+              <NavTab to="/home" className="btn px-0 font-navi">Home</NavTab>
+              <NavTab to="/overview" className="btn px-0 font-navi">Overview</NavTab>
+              <NavTab to="/team" className="btn px-0 font-navi">The Parallume Inc. Team</NavTab>
+              <NavTab to="/contactUs" className="btn px-0 font-navi">Contact Us</NavTab>
             </div>
           </nav>
         </RoutedTabs>

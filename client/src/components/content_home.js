@@ -23,12 +23,12 @@ class ContentHome extends Component {
                 </div>
                 <div className="col-lg-6">
                 <div className="ml-lg-5 pl-lg-5 py-5 my-5 ">
-                  <h1>Our Mission</h1>
+                  <h1 className="font-title">OUR MISSION</h1>
                   <h2>Bringing color to the world of molecular diagnostics</h2>
                   <p>
                     Parallume Inc. is a multiplex assay platform biotechnology company aimed at revolutionizing the field of molecular diagnostics for life-science researchers in academic, industry, and clinical settings.
                   </p>
-                  <a href="/ourTech" className="btn btn-outline-dark" role="button" aria-disabled="true">Learn More</a>
+                  <a href="/overview" className="btn btn-outline-dark" role="button" aria-disabled="true">Learn More</a>
                 </div>
               </div>
             </div>

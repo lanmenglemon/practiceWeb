@@ -9,6 +9,13 @@ var indexHtml = path.join(__dirname+'../../../client/dist/index.html');
 
 module.exports = app => {
 
+  app.get('/', function(req, res) {
+    res.writeHeader(302, {
+      location: '/home'
+    });
+    res.end();
+  });
+
   app.get('/home', function(req, res) {
     res.sendFile(indexHtml);
   });

@@ -12,7 +12,7 @@ class Header extends Component {
               <a className="navbar-brand " href="#">
                 <img src={logo} id="logo" />
               </a>
-              <span className="navbar-text col-12 col-lg-auto ml-0">Bringing Color to Life</span>
+              <span className="navbar-text col-12 col-lg-auto ml-0 font-header">Bringing Color to Life</span>
             </div>
             <div className="offset-lg-3 col-12 col-lg-auto pl-0">
               <a className="nav-link" href="mailto:kris@parallume.com">

@@ -62,3 +62,48 @@
 .messageInput {
   height:80px;
 }
+
+.card-deck {
+  .card {
+    @include media-breakpoint-up(sm) {
+      @include card-deck-column-count(1);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include card-deck-column-count(1);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include card-deck-column-count(3);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include card-deck-column-count(3);
+    }
+  }
+}
+
+.font-title {
+  font-family: Anton;
+  font-size: 48px;
+  font-weight:400;
+  line-height: 60px;
+  color: #242424;
+}
+ .font-header {
+   font-family: spinnaker;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 30px;
+   color: #242424;
+ }
+.font-navi {
+  color: #242424;
+}
+.font-card {
+  font-family: Anton;
+  font-size: 40px;
+  font-weight:400;
+  line-height: 50px;
+  color: #242424;
+}
