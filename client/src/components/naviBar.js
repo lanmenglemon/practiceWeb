@@ -50,8 +50,8 @@ export default class NaviBar extends Component {
           <nav className="navbar white-div">
             <div className="container">
               <NavTab to="/home" className="btn px-0">Home</NavTab>
-              <NavTab to="/ourTech" className="btn px-0">Our Technology</NavTab>
-              <NavTab to="/ourTeam" className="btn px-0">Our Team</NavTab>
+              <NavTab to="/overview" className="btn px-0">Overview</NavTab>
+              <NavTab to="/team" className="btn px-0">The Parallume Inc. Team</NavTab>
               <NavTab to="/contactUs" className="btn px-0">Contact Us</NavTab>
             </div>
           </nav>

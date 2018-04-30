@@ -13,11 +13,11 @@ module.exports = app => {
     res.sendFile(indexHtml);
   });
 
-  app.get('/ourTech', function(req, res) {
+  app.get('/overview', function(req, res) {
     res.sendFile(indexHtml);
   });
 
-  app.get('/ourTeam', function(req, res) {
+  app.get('/team', function(req, res) {
     res.sendFile(indexHtml);
   });
 
@@ -32,8 +32,8 @@ module.exports = app => {
       port: 465,
       secure: true,
       auth: {
-        user: '',
-        pass: ''
+        user: 'lanmenglemon@gmail.com',
+        pass: 'tmxboeoxelmtjqzd'
       }
     });
     mailOpts = {
@@ -48,6 +48,7 @@ module.exports = app => {
       }
       else {
         res.send('success');
+        res.sendFile(indexHtml);
       }
     });
   });

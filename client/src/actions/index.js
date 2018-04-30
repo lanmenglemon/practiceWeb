@@ -16,9 +16,10 @@ export function sendEmail(values) {
               }
             })
             .then(function (response) {
-                console.log(response);
+                alert("Email Sent Successfully!");
               })
-              .catch(function (error) {
+            .catch(function (error) {
+                alert("Something goes wrong!");
                 console.log(error);
             });
   return { type: SEND_EMAIL, payload: values };

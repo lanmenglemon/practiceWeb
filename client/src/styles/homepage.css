@@ -27,7 +27,9 @@
 .black-div {
   background-color: black;
 }
-
+.dark-green-div {
+  background-color: #A4CACD;
+}
 .copyright {
   font-size: 11px;
   font-family: Arial,

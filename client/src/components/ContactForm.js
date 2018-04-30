@@ -8,7 +8,6 @@ class ContactForm extends Component {
 
   onSubmit(values) {
     // print the form values to the console
-    console.log(values);
     this.props.sendEmail(values);
   }
 
