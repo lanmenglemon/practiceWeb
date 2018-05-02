@@ -20,7 +20,15 @@ module.exports = app => {
     res.sendFile(indexHtml);
   });
 
-  app.get('/overview', function(req, res) {
+  app.get('/aboutUs', function(req, res) {
+    res.sendFile(indexHtml);
+  });
+
+  app.get('/parallumEncodedBeads', function(req, res) {
+    res.sendFile(indexHtml);
+  });
+
+  app.get('/instruments', function(req, res) {
     res.sendFile(indexHtml);
   });
 

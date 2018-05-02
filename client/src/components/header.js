@@ -8,21 +8,21 @@ class Header extends Component {
     return(
         <header className="navbar navbar-expand navbar-light bd-navbar py-0" >
           <div className="container flex-lg-row flex-column">
-            <div className="col-12 col-lg-auto">
-              <a className="navbar-brand " href="#">
+            <div className="col-12 col-lg-auto text-center">
+              <a className="navbar-brand" href="#">
                 <img src={logo} id="logo" />
               </a>
-              <span className="navbar-text col-12 col-lg-auto ml-0 font-header">Bringing Color to Life</span>
+              <span className="navbar-text col-12 col-lg-auto ml-0 font-sp">Bringing Color to Life</span>
             </div>
-            <div className="offset-lg-3 col-12 col-lg-auto pl-0">
+            <div className="offset-lg-2 col-12 col-lg-auto pl-0 text-center">
               <a className="nav-link" href="mailto:kris@parallume.com">
                 <span className="navbar-text">kris@parallume.com</span>
               </a>
             </div>
-            <div className="col-12 col-lg-auto">
+            <div className="col-12 col-lg-auto text-center">
               <span className="navbar-text">(408)757-1116</span>
             </div>
-            <div className="col-12 col-lg-auto d-inline px-0">
+            <div className="col-12 col-lg-auto d-inline px-0 text-center">
               <a className="nav-link" href="https://www.linkedin.com/in/kristofer-haushalter-617508144/"
                 target="_blank" rel="noopener">
                 <img src={linkedin} id="linkedin" />

@@ -10,14 +10,19 @@
   width: 30px;
 }
 
-#Parallume_Bead {
+.default-image {
   width: 100%;
 }
-#Logo_With_Tagline {
-  width: 100%;
+.md-image {
+  width: 80%;
 }
-.green-div {
-  background-color: #E5F0F1;
+
+.md-image {
+  width: 80%;
+}
+
+.ivory-div {
+  background-color: #EFECE3;
 }
 
 .white-div {
@@ -27,8 +32,8 @@
 .black-div {
   background-color: black;
 }
-.dark-green-div {
-  background-color: #A4CACD;
+.grey-div {
+  background-color: #F9F9F9;
 }
 .copyright {
   font-size: 11px;
@@ -83,14 +88,18 @@
   }
 }
 
-.font-title {
+.btn.round {
+	border-radius: 24px;
+}
+
+.font-lg-title {
   font-family: Anton;
   font-size: 48px;
   font-weight:400;
   line-height: 60px;
   color: #242424;
 }
- .font-header {
+ .font-sp {
    font-family: spinnaker;
    font-size: 20px;
    font-weight: 400;
@@ -100,7 +109,7 @@
 .font-navi {
   color: #242424;
 }
-.font-card {
+.font-md-title {
   font-family: Anton;
   font-size: 40px;
   font-weight:400;
