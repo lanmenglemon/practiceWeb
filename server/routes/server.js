@@ -32,6 +32,10 @@ module.exports = app => {
     res.sendFile(indexHtml);
   });
 
+  app.get('/applications', function(req, res) {
+    res.sendFile(indexHtml);
+  });
+
   app.get('/team', function(req, res) {
     res.sendFile(indexHtml);
   });

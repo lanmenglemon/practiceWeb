@@ -26,7 +26,7 @@ class ContentHome extends Component {
                 <div className="col-lg-6">
                 <div className="ml-lg-5 pl-lg-5 py-5 my-5 ">
                   <h1 className="font-lg-title">OUR MISSION</h1>
-                  <h3>Bringing color to the world of molecular diagnostics</h3>
+                  <h3 className="font-sp">Bringing color to the world of molecular diagnostics</h3>
                   <p>
                     Parallume Inc. is a multiplex assay platform biotechnology company aimed at revolutionizing the field of molecular diagnostics for life-science researchers in academic, industry, and clinical settings.
                   </p>

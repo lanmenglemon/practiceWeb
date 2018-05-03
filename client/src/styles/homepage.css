@@ -116,3 +116,11 @@
   line-height: 50px;
   color: #242424;
 }
+
+.back {
+  z-index: -1 !important;
+}
+
+.transparent {
+  background: rgba(122, 130, 136, 0.2);
+}

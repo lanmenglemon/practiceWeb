@@ -33,7 +33,7 @@ export default class ContentAboutUs extends Component {
             <div className="col-lg-6">
               <div className="ml-lg-5 pl-lg-5 py-5 my-0 my-lg-5">
                 <h1 className="font-md-title">PARALLUME ENCODED BEADS</h1>
-                <h3>Unprecedented Plex Sizes</h3>
+                <h3 className="font-sp">Unprecedented Plex Sizes</h3>
                 <p>
                   Our ratiometric encoding system allows for a theoretical maximum of 10 Billion unique color codes. The versatility of Parallume encoded beads allows functionalization with any biomolecule (e.g. DNA, RNA or protein) to support numerous biological assay formats, including but not limited to real-time PCR, ELISA, and cell capture/isolation.
                 </p>
@@ -48,11 +48,11 @@ export default class ContentAboutUs extends Component {
             <div className="col-lg-6">
               <div className="ml-lg-5 pl-lg-5 pt-5 pb-lg-5 my-0 my-lg-5">
                 <h1 className="font-md-title">MULTIPLEX ASSAY READER SYSTEM (MARS) INSTRUMENTS</h1>
-                <h3>Low-cost definitive results</h3>
+                <h3 className="font-sp">Low-cost definitive results</h3>
                 <p>
                   Parallume Inc. offers sophisticated bead-reader imaging instruments in either benchtop or portable formats.
                 </p>
-                <a href="/contactUs" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
+                <a href="/instruments" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
               </div>
             </div>
             <div className="col-lg-6 col-10 mx-0 my-0 my-lg-5 py-0 py-lg-5">
@@ -63,7 +63,7 @@ export default class ContentAboutUs extends Component {
             <div className="col-lg-6">
               <div className="ml-lg-5 pl-lg-5 py-5 my-0 my-lg-5">
                 <h1 className="font-md-title">APPLICATIONS</h1>
-                <h3>Facilitating diagnostics in both laboratory and point-of-care clinical settings</h3>
+                <h3 className="font-sp">Facilitating diagnostics in both laboratory and point-of-care clinical settings</h3>
                 <p>
                   Parallume multiplex capabilities can increase the throughput of your assay, for detection and diagnosis of infectious disease, neurodegenerative disorders, and cardiovascular disease.
                 </p>
