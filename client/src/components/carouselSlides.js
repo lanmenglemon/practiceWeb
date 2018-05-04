@@ -18,16 +18,16 @@ export default class CarouselSlides extends Component {
           </ol>
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
-              <img type="button" className="d-block mx-auto w-100" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Tube} alt="First slide"/>
+              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Tube} alt="First slide"/>
             </div>
             <div className="carousel-item">
-              <img type="button" className="d-block mx-auto " data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Slide} alt="Second slide"/>
+              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Slide} alt="Second slide"/>
             </div>
             <div className="carousel-item">
-              <img type="button" className="d-block mx-auto" data-toggle="modal" data-target="#exampleModalCenter" src={Benchtop_MARS} alt="Third slide"/>
+              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Benchtop_MARS} alt="Third slide"/>
             </div>
             <div className="carousel-item">
-              <img type="button" className="d-block mx-auto" data-toggle="modal" data-target="#exampleModalCenter" src={Mobile_MARS} alt="Forth slide"/>
+              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Mobile_MARS} alt="Forth slide"/>
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -53,27 +53,27 @@ export default class CarouselSlides extends Component {
                 </ol>
                 <div className="carousel-inner">
                   <div className="carousel-item">
-                    <img src={Bead_Localization_Tube} alt="First slide"/>
+                    <img className="modal-image" src={Bead_Localization_Tube} alt="First slide"/>
                     <div className="carousel-caption d-none d-md-block">
-                      <p>Bead Localization Tube</p>
+                      <p className="font-white font-sp text-left">Bead Localization Tube</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src={Bead_Localization_Slide} alt="Second slide"/>
+                    <img className="modal-image" src={Bead_Localization_Slide} alt="Second slide"/>
                     <div className="carousel-caption d-none d-md-block">
-                      <p>Bead Localization Slide</p>
+                      <p className="font-black font-sp text-left">Bead Localization Slide</p>
                     </div>
                   </div>
                   <div className="carousel-item active">
-                    <img src={Benchtop_MARS} alt="Third slide"/>
+                    <img className="modal-image" src={Benchtop_MARS} alt="Third slide"/>
                     <div className="carousel-caption d-none d-md-block">
-                      <p>Benchtop MARS</p>
+                      <p className="font-black font-sp text-left">Benchtop MARS</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src={Mobile_MARS} alt="Forth slide"/>
+                    <img className="modal-image" src={Mobile_MARS} alt="Forth slide"/>
                     <div className="carousel-caption d-none d-md-block">
-                      <p>Mobile MARS</p>
+                      <p className="font-black font-sp text-left">Mobile MARS</p>
                     </div>
                   </div>
                 </div>

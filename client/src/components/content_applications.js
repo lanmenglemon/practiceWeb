@@ -3,21 +3,20 @@ import React, { Component } from "react";
 import MFA_Sandwich_ELISA_Cartoon from "../assets/images/Parallume_PSTI/MFA_Sandwich_ELISA_Cartoon.png";
 import BEAD_BASED_SUSPENSION_ARRAYS from "../assets/images/Parallume_PSTI/BEAD_BASED_SUSPENSION_ARRAYS.png";
 import temp from "../assets/images/Parallume_PSTI/temp.png";
+import Nanoparticle_Priniting from "../assets/images/Parallume_PSTI/Nanoparticle_Priniting.png";
 
 export default class ContentApplications extends Component {
   render() {
     return(
       <div>
-        <div className="position-fixed col-12 container-fluid back">
-          <img src={BEAD_BASED_SUSPENSION_ARRAYS} />
-        </div>
-        <div className="grey-div transparent">
+        <img src={Nanoparticle_Priniting} className="position-fixed w-100 px-0 sticky-top back bg-image"/>
+        <div className=" transparent">
           <div className="container">
             <div className="py-5 mx-auto">
               <div className="py-4">
-                <h1 className="pb-3 text-center font-lg-title">APPLICATIONS</h1>
-                <h3 className="text-center font-sp">Discover the power of Parallume!</h3>
-                <p className="text-center">Parallume Inc. offers a variety of multiplex applications, available in bead-based and lateral flow assay formats.</p>
+                <h1 className="pb-3 text-center font-lg-title font-white">APPLICATIONS</h1>
+                <h3 className="text-center font-sp font-white">Discover the power of Parallume!</h3>
+                <p className="text-center font-white">Parallume Inc. offers a variety of multiplex applications, available in bead-based and lateral flow assay formats.</p>
               </div>
             </div>
           </div>
@@ -41,7 +40,7 @@ export default class ContentApplications extends Component {
             </div>
             <div className="row py-5 py-lg-3">
               <div className="col-lg-6 my-0 my-lg-5 py-0 py-lg-0">
-                <img className="rounded float-right md-image " src={BEAD_BASED_SUSPENSION_ARRAYS} />
+                <img className="rounded float-lg-right md-image " src={BEAD_BASED_SUSPENSION_ARRAYS} />
               </div>
               <div className="col-lg-6">
                 <div className="col-10 pt-5 pb-lg-5 my-0 my-lg-5">
@@ -56,7 +55,7 @@ export default class ContentApplications extends Component {
             </div>
             <div className="row py-5 py-lg-3">
               <div className="col-lg-6 my-0 my-lg-5 py-0 py-lg-0">
-                <img className="rounded float-right md-image " src={temp} />
+                <img className="rounded float-lg-right md-image " src={temp} />
               </div>
               <div className="col-lg-6">
                 <div className="col-10 pt-5 pb-lg-5 my-0 my-lg-5">

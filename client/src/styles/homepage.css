@@ -20,6 +20,9 @@
 .md-image {
   width: 80%;
 }
+.bg-image {
+  filter: blur(5px);
+}
 
 .ivory-div {
   background-color: #EFECE3;
@@ -60,7 +63,38 @@
   height: 500px;
 }
 
-.red-font {
+.carousel-image {
+    height: 480px;
+    width: 100%;
+}
+.modal-image {
+    height: 480px;
+    width: 800px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #A9A9A9;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #A9A9A9;
+}
+
+.font-red {
   color: red;
 }
 
@@ -117,8 +151,14 @@
   color: #242424;
 }
 
+.font-black {
+  color: black;
+}
+.font-white {
+  color: #FFFFFF;
+}
 .back {
-  z-index: -1 !important;
+  z-index: -1;
 }
 
 .transparent {

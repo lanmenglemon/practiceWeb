@@ -6,7 +6,7 @@ import linkedin from "../assets/images/Parallume_PSTI/linkedin.jpg";
 class Header extends Component {
   render() {
     return(
-        <header className="navbar navbar-expand navbar-light bd-navbar py-0" >
+        <header className="navbar navbar-expand navbar-light bd-navbar py-0 white-div" >
           <div className="container flex-lg-row flex-column">
             <div className="col-12 col-lg-auto text-center">
               <a className="navbar-brand" href="#">

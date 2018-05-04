@@ -4,8 +4,8 @@ import linkedin from "../assets/images/Parallume_PSTI/linkedin.jpg";
 class Footer extends Component {
   render() {
     return (
-      <div>
-        <div className="container my-3 flex-column flex-sm-row">
+      <div className="white-div">
+        <div className="container py-3 flex-column flex-sm-row">
           <div className="row">
             <div className="col-6">
               <div className="container col-sm-9 mx-auto px-0">
