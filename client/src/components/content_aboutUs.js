@@ -67,7 +67,7 @@ export default class ContentAboutUs extends Component {
                 <p>
                   Parallume multiplex capabilities can increase the throughput of your assay, for detection and diagnosis of infectious disease, neurodegenerative disorders, and cardiovascular disease.
                 </p>
-                <a href="/contactUs" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
+                <a href="/applications" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
               </div>
             </div>
             <div className="col-lg-6 col-10 mx-0 my-lg-4">

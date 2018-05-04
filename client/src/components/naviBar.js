@@ -65,14 +65,16 @@ export default class NaviBar extends Component {
                     <li className="nav-item col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">
                       <NavTab to="/parallumEncodedBeads" className="btn font-navi mx-auto">Parallum Encoded Beads</NavTab>
                     </li>
-                    <li className="nav-item dropdown col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">
-                      <a className="nav-link dropdown-toggle font-navi" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
-                      <div className="dropdown-menu">
-                        <NavTab to="/instruments" className="btn font-navi mx-auto dropdown-item">Instruments</NavTab>
-                        <NavTab to="/applications" className="btn font-navi mx-auto dropdown-item">Applications</NavTab>
-                        <NavTab to="/team" className="btn font-navi mx-auto dropdown-item">The Parallume Inc. Team</NavTab>
+                    <li className="nav-item col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">
+                      <a className="nav-link dropdown-toggle font-navi" href="#"
+                          data-toggle="dropdown" role="button" aria-haspopup="true"
+                          aria-expanded="false">More</a>
+                      <div className="dropdown-menu col-12 col-lg-auto mx-auto text-center">
+                        <NavTab to="/instruments" className="btn font-navi mx-auto">Instruments</NavTab>
+                        <NavTab to="/applications" className="btn font-navi mx-auto">Applications</NavTab>
+                        <NavTab to="/team" className="btn font-navi mx-auto">The Parallume Inc. Team</NavTab>
                         <div className="dropdown-divider"></div>
-                        <NavTab to="/contactUs" className="btn font-navi mx-auto dropdown-item">Contact Us</NavTab>
+                        <NavTab to="/contactUs" className="btn font-navi mx-auto">Contact Us</NavTab>
                       </div>
                     </li>
                 </ul>
