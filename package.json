@@ -30,7 +30,7 @@
     "morgan": "~1.9.0"
   },
   "scripts": {
-    "start": "nodemon ./app.js --exec babel-node",
+    "start": "node ./app.js ",
     "watch": "webpack --mode development --config webpack.config.js --watch -d"
   },
   "devDependencies": {
