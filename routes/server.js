@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 
-var indexHtml = path.join(__dirname+'/../index.html');
+var indexHtml = path.join(__dirname+'/../views/index.html');
 
 app.get('/', function(req, res) {
   console.log('/');
