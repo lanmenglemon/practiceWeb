@@ -16,6 +16,7 @@ export default class CarouselSlides extends Component {
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
+          //imaged need to be optimized when sm breakpoint
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
               <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Tube} alt="First slide"/>
@@ -53,6 +54,7 @@ export default class CarouselSlides extends Component {
                 </ol>
                 <div className="carousel-inner">
                   <div className="carousel-item">
+                  //need react for active
                     <img className="modal-image" src={Bead_Localization_Tube} alt="First slide"/>
                     <div className="carousel-caption d-none d-md-block">
                       <p className="font-white font-sp text-left">Bead Localization Tube</p>

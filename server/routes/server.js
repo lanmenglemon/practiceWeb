@@ -52,7 +52,7 @@ module.exports = app => {
       secure: true,
       auth: {
         user: 'lanmenglemon@gmail.com',
-        pass: ''
+        pass: 'kujmvuycrgzlvtqn'
       }
     });
     mailOpts = {
