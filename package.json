@@ -30,7 +30,7 @@
     "morgan": "~1.9.0"
   },
   "scripts": {
-    "start": "node ./app.js ",
+    "start": "node ./bin/www ",
     "watch": "webpack --mode development --config webpack.config.js --watch -d"
   },
   "devDependencies": {
