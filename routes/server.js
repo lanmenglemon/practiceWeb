@@ -59,7 +59,7 @@ app.post('/contactUs', function(req, res) {
     secure: true,
     auth: {
       user: 'lanmenglemon@gmail.com',
-      pass: ''
+      pass: 'xgntdjepwlbizmzb'
     }
   });
   mailOpts = {
