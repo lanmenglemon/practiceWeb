@@ -16,7 +16,7 @@ class Footer extends Component {
                   </a>
                 </div>
                 <div className="col-12 col-sm-auto">
-                  <span className="text-muted">(408)757-1116</span>
+                  <span className="text-muted">(858)215-4761</span>
                 </div>
               </div>
             </div>
@@ -24,7 +24,7 @@ class Footer extends Component {
               <div className="container col-sm-9 mx-auto px-0">
                 <div className="col-12 col-sm-auto">Follow Us:</div>
               <div className="col-12 col-sm-auto pl-0">
-                  <a className="nav-link" href="https://www.linkedin.com/in/kristofer-haushalter-617508144/"
+                  <a className="nav-link" href="https://www.linkedin.com/parallumeinc/"
                     target="_blank" rel="noopener">
                     <img src={linkedin} id="linkedin" />
                   </a>

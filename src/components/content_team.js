@@ -20,11 +20,11 @@ export default class ContentTeam extends Component {
                   <p className="card-text text-center font-sp">Chief Technical Officer</p>
                 </div>
               </div>
-              <div className="card mx-5 grey-div border-0">
+              <div className="card mx-auto mx-md-5 grey-div border-0">
                 <img className="card-img-top" src={JJ_pic} alt="Card image cap"/>
                 <div className="card-body">
                   <h5 className="card-title font-md-title text-center">JINGJING JIANG, M.D. PH.D.</h5>
-                  <p className="card-text text-center font-sp">Chief Medical Officer</p>
+                  <p className="card-text text-center font-sp">Medical Application Consultant</p>
                 </div>
               </div>
               <div className="card grey-div border-0">
@@ -43,7 +43,7 @@ export default class ContentTeam extends Component {
                 <p className="card-text text-center font-sp">Founder, President, & Inventor</p>
               </div>
             </div>
-            <div className="card mx-5 grey-div border-0">
+            <div className="card mx-auto mx-md-5 grey-div border-0">
               <img className="card-img-top" src={User_pic} alt="Card image cap"/>
               <div className="card-body">
                 <h5 className="card-title font-md-title text-center">JEANNE P. HAUSHALTER, PH.D.</h5>

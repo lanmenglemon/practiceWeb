@@ -60,16 +60,61 @@
 }
 
 #carouselContainer {
-  height: 500px;
+  height: 520px;
 }
 
+/* xs */
 .carousel-image {
-    height: 480px;
     width: 100%;
+    height: 160px;
 }
+/* sm */
+@media (min-width: 768px) {
+    .carousel-image {
+        width: 100%;
+        height: 300px;
+    }
+}
+/* md */
+@media (min-width: 992px) {
+    .carousel-image {
+        width: 100%;
+        height: 380px;
+    }
+}
+/* lg */
+@media (min-width: 1200px) {
+    .carousel-image {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* xs */
 .modal-image {
-    height: 480px;
-    width: 800px;
+    height: 180px;
+    width: 300px;
+}
+/* sm */
+@media (min-width: 768px) {
+    .modal-image {
+        height: 307px;
+        width: 512px;
+    }
+}
+/* md */
+@media (min-width: 992px) {
+    .modal-image {
+        height: 400px;
+        width: 660px;
+    }
+}
+/* lg */
+@media (min-width: 1200px) {
+    .modal-image {
+        height: 480px;
+        width: 800px;
+    }
 }
 
 .carousel-control-prev-icon,

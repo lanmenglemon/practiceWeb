@@ -20,10 +20,10 @@ class Header extends Component {
               </a>
             </div>
             <div className="col-12 col-lg-auto text-center">
-              <span className="navbar-text">(408)757-1116</span>
+              <span className="navbar-text">(858)215-4761</span>
             </div>
             <div className="col-12 col-lg-auto d-inline px-0 text-center">
-              <a className="nav-link" href="https://www.linkedin.com/in/kristofer-haushalter-617508144/"
+              <a className="nav-link" href="https://www.linkedin.com/parallumeinc/"
                 target="_blank" rel="noopener">
                 <img src={linkedin} id="linkedin" />
               </a>
