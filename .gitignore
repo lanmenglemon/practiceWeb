@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+.elasticbeanstalk/
 
 # testing
 /coverage
@@ -20,3 +21,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
