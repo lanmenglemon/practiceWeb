@@ -9,10 +9,10 @@ export function sendEmail(values) {
               method: 'post',
               url: '/contactUs',
               data: {
-                name: values.name,
-                email: values.email,
-                subject: values.subject,
-                message: values.message
+                name: values.Name,
+                email: values.Email,
+                subject: values.Subject,
+                message: values.Message
               }
             })
             .then(function (response) {
