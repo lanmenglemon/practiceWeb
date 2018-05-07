@@ -4,6 +4,7 @@ import { sendEmail } from "../actions/index";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
+
 class ContactForm extends Component {
 
   onSubmit(values) {
@@ -13,7 +14,7 @@ class ContactForm extends Component {
 
   renderField(field) {
     const { meta: { touched, error } } = field;
-    const fieldClassName = `form-group has-danger ${touched && error ? "red-font" : ""}`;
+    const fieldClassName = `form-group has-danger ${touched && error ? "font-red" : ""}`;
 
     if(field.input.name=="Message") {
       return (

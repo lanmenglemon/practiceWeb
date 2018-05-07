@@ -10,9 +10,9 @@ class Header extends Component {
           <div className="container flex-lg-row flex-column">
             <div className="col-12 col-lg-auto text-center">
               <a className="navbar-brand" href="#">
-                <img src={logo} id="logo" />
+                <img className="mb-lg-1" src={logo} id="logo" />
               </a>
-              <span className="navbar-text col-12 col-lg-auto ml-0 font-sp">Bringing Color to Life</span>
+              <span className="navbar-text col-12 col-lg-auto ml-0 font-sp">Bring Color to Life</span>
             </div>
             <div className="offset-lg-2 col-12 col-lg-auto pl-0 text-center">
               <a className="nav-link" href="mailto:kris@parallume.com">

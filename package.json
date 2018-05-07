@@ -31,6 +31,7 @@
   },
   "scripts": {
     "start": "node ./bin/www ",
+    "aaa": "nodemon ./bin/www",
     "watch": "webpack --mode development --config webpack.config.js --watch -d"
   },
   "devDependencies": {

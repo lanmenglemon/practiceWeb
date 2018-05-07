@@ -1,11 +1,80 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { selectImage } from "../actions/index";
+import { bindActionCreators } from "redux";
 
 import Bead_Localization_Tube from "../../public/images/Parallume_PSTI/Bead_Localization_Tube.png";
 import Bead_Localization_Slide from "../../public/images/Parallume_PSTI/Bead_Localization_Slide.png";
 import Benchtop_MARS from "../../public/images/Parallume_PSTI/Benchtop_MARS.png";
 import Mobile_MARS from "../../public/images/Parallume_PSTI/Mobile_MARS.png";
 
-export default class CarouselSlides extends Component {
+class CarouselSlides extends Component {
+  renderCarouselList() {
+    return this.props.images.map(image => {
+      if (image.name == "Bead Localization Tube") {
+        return (
+          <div className="carousel-item active">
+            <img
+              type="button"
+              className="d-block mx-auto carousel-image"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+              src={image.path}
+              onClick={() => this.props.selectImage(image)}/>
+          </div>
+        );
+      }
+      else {
+        return (
+          <div className="carousel-item">
+            <img
+              type="button"
+              className="d-block mx-auto carousel-image"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+              src={image.path}
+              onClick={() => this.props.selectImage(image)}/>
+          </div>
+        );
+      }
+    });
+  }
+
+  renderModalList() {
+    if (!this.props.activeImage || this.props.activeImage.name == "Bead Localization Tube") {
+      return this.props.images.map(image => {
+        var cn = `carousel-item`;
+        if (image.name == "Bead Localization Tube") {
+          cn = cn + ` active`;
+        }
+        return (
+          <div className={cn}>
+            <img className="modal-image" src={image.path}/>
+            <div className="carousel-caption d-none d-md-block">
+              <p className="font-black font-sp text-left">{image.name}</p>
+            </div>
+          </div>
+        );
+      });
+    }
+    else {
+      return this.props.images.map(image => {
+        var cn = `carousel-item`;
+        if (image.name == this.props.activeImage.name) {
+          cn = cn + ` active`;
+        }
+        return (
+          <div className={cn}>
+            <img className="modal-image" src={image.path}/>
+            <div className="carousel-caption d-none d-md-block">
+              <p className="font-black font-sp text-left">{image.name}</p>
+            </div>
+          </div>
+        );
+      });
+    }
+  }
+
   render() {
     return(
       <div>
@@ -17,18 +86,7 @@ export default class CarouselSlides extends Component {
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
           <div className="carousel-inner" role="listbox">
-            <div className="carousel-item active">
-              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Tube} alt="First slide"/>
-            </div>
-            <div className="carousel-item">
-              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Bead_Localization_Slide} alt="Second slide"/>
-            </div>
-            <div className="carousel-item">
-              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Benchtop_MARS} alt="Third slide"/>
-            </div>
-            <div className="carousel-item">
-              <img type="button" className="d-block mx-auto carousel-image" data-toggle="modal" data-target="#exampleModalCenter" src={Mobile_MARS} alt="Forth slide"/>
-            </div>
+            {this.renderCarouselList()}
           </div>
           <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,30 +110,7 @@ export default class CarouselSlides extends Component {
                   <li data-target="#carouselExampleIndicator" data-slide-to="3"></li>
                 </ol>
                 <div className="carousel-inner">
-                  <div className="carousel-item">
-                    <img className="modal-image" src={Bead_Localization_Tube} alt="First slide"/>
-                    <div className="carousel-caption d-none d-md-block">
-                      <p className="font-white font-sp text-left">Bead Localization Tube</p>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <img className="modal-image" src={Bead_Localization_Slide} alt="Second slide"/>
-                    <div className="carousel-caption d-none d-md-block">
-                      <p className="font-black font-sp text-left">Bead Localization Slide</p>
-                    </div>
-                  </div>
-                  <div className="carousel-item active">
-                    <img className="modal-image" src={Benchtop_MARS} alt="Third slide"/>
-                    <div className="carousel-caption d-none d-md-block">
-                      <p className="font-black font-sp text-left">Benchtop MARS</p>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <img className="modal-image" src={Mobile_MARS} alt="Forth slide"/>
-                    <div className="carousel-caption d-none d-md-block">
-                      <p className="font-black font-sp text-left">Mobile MARS</p>
-                    </div>
-                  </div>
+                  {this.renderModalList()}
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicator" role="button" data-slide="prev">
                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -95,3 +130,16 @@ export default class CarouselSlides extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    images: state.images,
+    activeImage: state.activeImage
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectImage: selectImage }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CarouselSlides);

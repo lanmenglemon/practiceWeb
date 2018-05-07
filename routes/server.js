@@ -63,22 +63,24 @@ app.post('/contactUs', function(req, res) {
     secure: true,
     auth: {
       user: 'lanmenglemon@gmail.com',
-      pass: 'xgntdjepwlbizmzb'
+      pass: 'ronycxoijretgnop'
     }
   });
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: 'lanmenglemon@gmail.com',
+    to: 'kris@parallume.com',
     subject: req.body.subject,
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
+      console.log('error');
       res.send(error);
     }
     else {
-      res.send('success');
-      res.sendFile(indexHtml);
+      // res.send('success');
+      console.log('refresh');
+      res.redirect('/contactUs');
     }
   });
 });

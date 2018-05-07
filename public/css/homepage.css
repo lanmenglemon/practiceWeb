@@ -20,8 +20,19 @@
 .md-image {
   width: 80%;
 }
+
 .bg-image {
   filter: blur(5px);
+  padding-top: 50px;
+  height: 650px;
+  width: 100%;
+}
+/* sm */
+@media (min-width : 768px) {
+  .bg-image {
+    filter: blur(5px);
+    padding-top: 0px;
+  }
 }
 
 .ivory-div {
@@ -51,16 +62,12 @@
 }
 
 .modal-dialog{
-    position: relative;
-    display: table; /* This is important */
-    overflow-y: auto;
-    overflow-x: auto;
-    width: auto;
-    min-width: 300px;
-}
-
-#carouselContainer {
-  height: 520px;
+  position: relative;
+  display: table; /* This is important */
+  overflow-y: auto;
+  overflow-x: auto;
+  width: auto;
+  min-width: 300px;
 }
 
 /* xs */

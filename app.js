@@ -8,7 +8,7 @@ var app = express();
 
 // app.set('port', process.env.PORT || 80);
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/views', express.static(path.join(__dirname, 'views')));
 
 app.use('/', indexRouter);
