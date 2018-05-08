@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+var config = require('../config.json');
 
 const app = express();
 
@@ -62,19 +63,19 @@ app.post('/contactUs', function(req, res) {
     port: 465,
     secure: true,
     auth: {
-      user: 'kris.haushalter@gmail.com',
-      pass: ''
+      user: config.test_email,
+      pass: config.test_pass
     }
   });
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: 'kris@parallume.com',
+    to: config.test_email,
     subject: req.body.subject,
     text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
-      console.log('error');
+      console.log(config.test_email);
       res.send(error);
     }
     else {

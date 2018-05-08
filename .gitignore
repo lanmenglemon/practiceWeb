@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 .elasticbeanstalk/
+config.json
 
 # testing
 /coverage

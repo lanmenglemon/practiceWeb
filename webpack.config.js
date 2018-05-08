@@ -25,6 +25,10 @@ module.exports = {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),//热加载插件
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      })
+      // new config.optimization.minimize()
       // new ExtractTextPlugin('client/dist/css/index.css'),
       // new PurifyCssPlugin({
       //   paths:glob.sync(path.join(__dirname,'client/dist/*.html'))

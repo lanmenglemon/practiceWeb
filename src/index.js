@@ -10,7 +10,7 @@ import "../public/css/homepage.css";
 import reducers from "./reducers";
 import Homepage from "./components/homepage";
 
-import registerServiceWorker from "./registerServiceWorker";
+// import registerServiceWorker from "./registerServiceWorker";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
