@@ -62,8 +62,8 @@ app.post('/contactUs', function(req, res) {
     port: 465,
     secure: true,
     auth: {
-      user: 'lanmenglemon@gmail.com',
-      pass: 'ronycxoijretgnop'
+      user: 'kris.haushalter@gmail.com',
+      pass: ''
     }
   });
   mailOpts = {
