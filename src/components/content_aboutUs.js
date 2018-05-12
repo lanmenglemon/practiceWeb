@@ -37,7 +37,7 @@ export default class ContentAboutUs extends Component {
                 <p>
                   Our ratiometric encoding system allows for a theoretical maximum of 10 Billion unique color codes. The versatility of Parallume encoded beads allows functionalization with any biomolecule (e.g. DNA, RNA or protein) to support numerous biological assay formats, including but not limited to real-time PCR, ELISA, and cell capture/isolation.
                 </p>
-                <a href="/parallumEncodedBeads" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
+                <a href="/parallumeEncodedBeads" className="btn btn-outline-dark round" role="button" aria-disabled="true">Learn More</a>
               </div>
             </div>
             <div className="col-lg-6 col-10 mx-0 my-lg-4">
