@@ -11,7 +11,7 @@ class Footer extends Component {
               <div className="container col-sm-9 mx-auto px-0">
                 <div className="col-12 col-sm-auto">Contact Us:</div>
                 <div className="col-12 col-sm-auto">
-                  <a className="" href="#">
+                  <a className="" href="mailto:kris@parallume.com">
                     <span className="text-muted">kris@parallume.com</span>
                   </a>
                 </div>
