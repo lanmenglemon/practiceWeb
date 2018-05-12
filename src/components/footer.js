@@ -24,7 +24,7 @@ class Footer extends Component {
               <div className="container col-sm-9 mx-auto px-0">
                 <div className="col-12 col-sm-auto">Follow Us:</div>
               <div className="col-12 col-sm-auto pl-0">
-                  <a className="nav-link" href="https://www.linkedin.com/parallumeinc/"
+                  <a className="nav-link" href="https://www.linkedin.com/company/parallumeinc/"
                     target="_blank" rel="noopener">
                     <img src={linkedin} id="linkedin" />
                   </a>

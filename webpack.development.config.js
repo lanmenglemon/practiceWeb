@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const glob = require('glob');
 // const PurifyCssPlugin = require('purifycss-webpack');
@@ -16,7 +17,6 @@ module.exports = {
         hotUpdateChunkFilename: 'hot-update.js',
         hotUpdateMainFilename: 'hot-update.json'
     },
-    devtool: 'inline-source-map',
     devServer: {
 	    contentBase: "./public",//本地服务器所加载的页面所在的目录
 	    colors: true,//终端中输出结果为彩色
@@ -26,14 +26,29 @@ module.exports = {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),//热加载插件
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
-      })
-      // new config.optimization.minimize()
+        'process.env.NODE_ENV': JSON.stringify('development')
+    })
+      // new webpack.optimize.UglifyJsPlugin()
       // new ExtractTextPlugin('client/dist/css/index.css'),
       // new PurifyCssPlugin({
       //   paths:glob.sync(path.join(__dirname,'client/dist/*.html'))
       // })
     ],
+    optimization: {
+    minimizer: [
+      // we specify a custom UglifyJsPlugin here to get source maps in production
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: false,
+          ecma: 6,
+          mangle: true
+        },
+        sourceMap: true
+      })
+    ]
+},
     resolve: {
         extensions: ['.js', '.json']
     },

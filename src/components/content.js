@@ -17,7 +17,7 @@ class Content extends Component {
         <div className="contents">
           <Route path={`/home`} component={ContentHome} />
           <Route path={`/aboutUs`} component={ContentAboutUs} />
-          <Route path={`/parallumEncodedBeads`} component={ContentPEB} />
+          <Route path={`/parallumeEncodedBeads`} component={ContentPEB} />
           <Route path={`/instruments`} component={ContentInstruments} />
           <Route path={`/applications`} component={ContentApplications} />
           <Route path={`/team`} component={ContentTeam} />

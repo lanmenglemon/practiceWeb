@@ -30,8 +30,8 @@ app.get('/aboutUs', function(req, res) {
   res.sendFile(indexHtml);
 });
 
-app.get('/parallumEncodedBeads', function(req, res) {
-  console.log('/parallumEncodedBeads');
+app.get('/parallumeEncodedBeads', function(req, res) {
+  console.log('/parallumeEncodedBeads');
   res.sendFile(indexHtml);
 });
 
