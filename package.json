@@ -30,7 +30,7 @@
     "start": "node ./bin/www ",
     "aaa": "nodemon ./bin/www",
     "watch-dev": "webpack --mode development --config webpack.development.config.js --watch -d",
-    "watch": "webpack --mode production --config webpack.production.config.js --watch -d",
+    "watch": "webpack --mode production --config webpack.production.config.js --watch",
     "build": "react-scripts build",
     "deploy": "set NODE_ENV=production && webpack -p --config webpack.production.config.js --progress"
   },

@@ -20,8 +20,11 @@ ReactDOM.render(
         <Switch>
           <Route path="/" component={Homepage} />
           <Route path="/home" component={Homepage} />
-          <Route path="/ourTech" component={Homepage} />
-          <Route path="/ourTeam" component={Homepage} />
+          <Route path="/aboutUs" component={Homepage} />
+          <Route path="/parallumeEncodedBeads" component={Homepage} />
+          <Route path="/instruments" component={Homepage} />
+          <Route path="/applications" component={Homepage} />
+          <Route path="/team" component={Homepage} />
           <Route path="/contactUs" component={Homepage} />
         </Switch>
       </div>
