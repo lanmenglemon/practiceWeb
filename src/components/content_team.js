@@ -15,7 +15,7 @@ export default class ContentTeam extends Component {
               <div className="card grey-div border-0">
                 <img className="card-img-top" src={Kris_pic} alt="Card image cap"/>
                 <div className="card-body">
-                  <h5 className="card-title font-md-title text-center">KRISTOFER HAUSHALTER, PH.D.</h5>
+                  <h5 className="card-title font-md-title text-center">Kristofer Haushalter, Ph.D.</h5>
                   <p className="card-text text-center font-sp">Chief Executive Officer</p>
                   <p className="card-text text-center font-sp">Chief Technical Officer</p>
                 </div>
@@ -23,41 +23,18 @@ export default class ContentTeam extends Component {
               <div className="card mx-auto mx-md-5 grey-div border-0">
                 <img className="card-img-top" src={JJ_pic} alt="Card image cap"/>
                 <div className="card-body">
-                  <h5 className="card-title font-md-title text-center">JINGJING JIANG, M.D. PH.D.</h5>
+                  <h5 className="card-title font-md-title text-center">Jingjing Jiang, M.D. Ph.D.</h5>
                   <p className="card-text text-center font-sp">Medical Application Consultant</p>
                 </div>
               </div>
               <div className="card grey-div border-0">
                 <img className="card-img-top" src={Bob_pic} alt="Card image cap"/>
                 <div className="card-body">
-                  <h5 className="card-title font-md-title text-center">ROBERT HAUSHALTER, PH.D.</h5>
+                  <h5 className="card-title font-md-title text-center">Robert Haushalter, Ph.D.</h5>
                   <p className="card-text text-center font-sp">Scientific Applications Specialist</p>
                 </div>
               </div>
           </div>
-          <div className="card-deck mx-auto pb-5">
-            <div className="card grey-div border-0">
-              <img className="card-img-top" src={User_pic} alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title font-md-title text-center">ROBERT C. HAUSHALTER, PH.D.</h5>
-                <p className="card-text text-center font-sp">Founder, President, & Inventor</p>
-              </div>
-            </div>
-            <div className="card mx-auto mx-md-5 grey-div border-0">
-              <img className="card-img-top" src={User_pic} alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title font-md-title text-center">JEANNE P. HAUSHALTER, PH.D.</h5>
-                <p className="card-text text-center font-sp">Chief Operations Officer</p>
-              </div>
-            </div>
-            <div className="card grey-div border-0">
-              <img className="card-img-top" src={User_pic} alt="Card image cap"/>
-              <div className="card-body">
-                <h5 className="card-title font-md-title text-center">SRINIVAS VETCHA, M.S.</h5>
-                <p className="card-text text-center font-sp">Engineering Specialist</p>
-              </div>
-            </div>
-        </div>
         </div>
       </div>
     );

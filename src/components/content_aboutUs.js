@@ -47,7 +47,7 @@ export default class ContentAboutUs extends Component {
           <div className="row py-5 py-lg-3">
             <div className="col-lg-6">
               <div className="ml-lg-5 pl-lg-5 pt-5 pb-lg-5 my-0 my-lg-5">
-                <h1 className="font-md-title">MULTIPLEX ASSAY READER SYSTEM (MARS) INSTRUMENTS</h1>
+                <h1 className="font-md-title">MULTIPLEX ASSAY READER SYSTEM (MARS<sup>TM</sup>) INSTRUMENTS</h1>
                 <h3 className="font-sp">Low-cost definitive results</h3>
                 <p>
                   Parallume Inc. offers sophisticated bead-reader imaging instruments in either benchtop or portable formats.
