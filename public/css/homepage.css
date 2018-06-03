@@ -216,3 +216,10 @@
 .transparent {
   background: rgba(122, 130, 136, 0.2);
 }
+
+.page-fill {
+  padding-bottom: 150px;
+}
+.btn-custom {
+  width: 130px !important;
+}

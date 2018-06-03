@@ -31,6 +31,9 @@ export default class NaviBar extends Component {
                       <NavTab to="/instruments" className="btn font-navi mx-auto">Instruments</NavTab>
                     </li>
                     <li className="nav-item col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">
+                      <NavTab to="/multiplexLateralFlowAssays" className="btn font-navi mx-auto">Multiplex Lateral Flow Assays</NavTab>
+                    </li>
+                    <li className="nav-item col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">
                       <NavTab to="/team" className="btn font-navi mx-auto">The Parallume Inc. Team</NavTab>
                     </li>
                     <li className="nav-item col-12 col-lg-auto px-lg-0 mx-lg-1 mx-auto">

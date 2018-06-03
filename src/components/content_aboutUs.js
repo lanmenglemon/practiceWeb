@@ -15,7 +15,7 @@ export default class ContentAboutUs extends Component {
             <div className="pt-5 col-9 mx-auto">
               <h1 className="py-3 text-center font-lg-title">OUR TECHNOLOGY</h1>
               <p className="text-center">
-                Parallume Inc. is centered around the utility of our novel, patent-protected optical encoding material that allows for identification and quantification of unprecedented numbers of biological targets (e.g. DNA/RNA, protein, and cells) from a single sample. Our technology platform includes the encoding material itself, as well as a line of multiplex assay reader systems (“MARS” TM) and associated bead localization substrates, available in either benchtop or portable device formats.
+                Parallume Inc. is centered around the utility of our novel, patent-protected optical encoding material that allows for identification and quantification of unprecedented numbers of biological targets (e.g. DNA/RNA, protein, and cells) from a single sample. Our technology platform includes the encoding material itself, as well as a line of multiplex assay reader systems (MARS<sup>TM</sup>) and associated bead localization substrates, available in either benchtop or portable device formats.
               </p>
               <div  className="py-3">
                 <CarouselSlides />

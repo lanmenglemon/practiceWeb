@@ -45,6 +45,11 @@ app.get('/applications', function(req, res) {
   res.sendFile(indexHtml);
 });
 
+app.get('/multiplexLateralFlowAssays', function(req, res) {
+  console.log('/multiplexLateralFlowAssays');
+  res.sendFile(indexHtml);
+});
+
 app.get('/team', function(req, res) {
   console.log('/team');
   res.sendFile(indexHtml);

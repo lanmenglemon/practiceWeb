@@ -9,6 +9,7 @@ import ContentContactUs from "./content_contactUs";
 import ContentPEB from "./content_PEB";
 import ContentInstruments from "./content_instruments";
 import ContentApplications from "./content_applications";
+import ContentMLFA from "./content_MLFA";
 
 class Content extends Component {
   render() {
@@ -20,6 +21,7 @@ class Content extends Component {
           <Route path={`/parallumeEncodedBeads`} component={ContentPEB} />
           <Route path={`/instruments`} component={ContentInstruments} />
           <Route path={`/applications`} component={ContentApplications} />
+          <Route path={'/multiplexLateralFlowAssays'} component={ContentMLFA} />
           <Route path={`/team`} component={ContentTeam} />
           <Route path={`/contactUs`} component={ContentContactUs} />
         </div>
